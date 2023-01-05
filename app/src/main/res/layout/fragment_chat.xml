@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.ChatFragment">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_medium_2"
+        android:layout_marginTop="@dimen/margin_medium_2"
+        android:text="Chats"
+        android:textColor="@color/text_color_primary"
+        android:textSize="@dimen/text_heading_1x"
+        android:textStyle="bold" />
+
+    <ImageButton
+        android:id="@+id/btnSearchUser"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/margin_medium_2"
+        android:layout_marginEnd="@dimen/margin_medium_2"
+        android:background="@drawable/fill_color_button_background"
+        android:src="@drawable/ic_search"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/lblActiveNow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnSearchUser"
+        android:layout_marginStart="@dimen/margin_medium_2"
+        android:layout_marginTop="@dimen/margin_medium_2"
+        android:text="@string/lbl_active_now" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvActiveUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lblActiveNow"
+        android:layout_marginTop="@dimen/margin_medium_2"
+        android:clipToPadding="false"
+        android:orientation="horizontal"
+        android:paddingEnd="@dimen/margin_medium_2"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:itemCount="5"
+        tools:listitem="@layout/view_holder_active_user" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="@dimen/margin_medium_2"
+        android:id="@+id/rvActiveChat"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rvActiveUser"
+        android:clipToPadding="false"
+        android:paddingBottom="@dimen/margin_medium_2"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:orientation="vertical"
+        tools:listitem="@layout/view_holder_active_chat"
+        tools:itemCount="5"
+        />
+</RelativeLayout>

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.MeFragment">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvMe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_medium_2"
+        android:layout_marginTop="@dimen/margin_medium_2"
+        android:text="@string/lbl_me"
+        android:textColor="@color/text_color_primary"
+        android:textSize="@dimen/text_heading_1x"
+        android:textStyle="bold" />
+
+    <ImageButton
+        android:id="@+id/ivEditProfile"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/margin_medium_2"
+        android:layout_marginEnd="@dimen/margin_medium_2"
+        android:background="@drawable/fill_color_button_background"
+        android:src="@drawable/ic_edit" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_below="@id/tvMe"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+
+    <RelativeLayout
+        android:id="@+id/rlProfile"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+
+        android:layout_marginStart="@dimen/margin_medium_2"
+        android:layout_marginTop="@dimen/margin_medium_2"
+        android:layout_marginEnd="@dimen/margin_medium_2"
+        android:background="@drawable/fill_color_button_background">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ivProfileImage"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/margin_medium_2"
+            android:src="@drawable/profile_vector" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivQr"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignBottom="@id/ivProfileImage"
+            android:layout_marginStart="-40dp"
+            android:layout_toEndOf="@id/ivProfileImage"
+            android:elevation="2dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/sample_qr" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btnUpload"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignBottom="@id/ivProfileImage"
+            android:layout_marginStart="@dimen/margin_medium_3"
+            android:elevation="2dp"
+            android:src="@drawable/ic_baseline_image_white_24" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvUserNameFromMeFragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_medium_2"
+            android:layout_marginTop="@dimen/margin_medium_2"
+            android:layout_toEndOf="@id/ivProfileImage"
+            android:text="@string/lbl_username"
+            android:textColor="@color/color_primary"
+            android:textSize="@dimen/text_regular_3x"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvPhoneNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvUserNameFromMeFragment"
+            android:layout_marginStart="@dimen/margin_medium_2"
+            android:layout_marginTop="@dimen/margin_medium_2"
+            android:layout_toEndOf="@id/ivProfileImage"
+            android:drawableLeft="@drawable/ic_baseline_phone_android_black_24"
+            android:drawablePadding="@dimen/margin_medium"
+            android:drawableTint="@color/color_primary"
+            android:text="@string/lbl_phone_number"
+            android:textColor="@color/color_primary"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvDateOfBirth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvPhoneNumber"
+            android:layout_marginStart="@dimen/margin_medium_2"
+            android:layout_marginTop="@dimen/margin_medium_2"
+            android:layout_toEndOf="@id/ivProfileImage"
+            android:drawableLeft="@drawable/ic_baseline_calendar_month_black_24"
+            android:drawablePadding="@dimen/margin_medium"
+            android:drawableTint="@color/color_primary"
+            android:text="12-12-2000"
+            android:textColor="@color/color_primary"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvGender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvDateOfBirth"
+            android:layout_marginStart="@dimen/margin_medium_2"
+            android:layout_marginTop="@dimen/margin_medium_2"
+            android:layout_toEndOf="@id/ivProfileImage"
+            android:drawableLeft="@drawable/ic_baseline_merge_24"
+            android:drawablePadding="@dimen/margin_medium"
+            android:drawableTint="@color/color_primary"
+            android:text="@string/lbl_male"
+            android:textColor="@color/color_primary"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvBookmarkedMoments"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rlProfile"
+                android:layout_marginStart="@dimen/margin_medium_2"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:text="@string/lbl_bookmarked_moments"
+                android:textColor="@color/text_color_primary"
+                android:textSize="@dimen/text_regular_3x"
+
+                 />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvBookmarkedMoments"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvBookmarkedMoments"
+        />
+
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+</RelativeLayout>

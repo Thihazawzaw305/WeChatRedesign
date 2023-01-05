@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="@dimen/margin_card_medium_2"
+    android:layout_marginHorizontal="@dimen/margin_medium_2"
+    app:cardCornerRadius="@dimen/margin_medium_2">
+
+    <RelativeLayout
+        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_marginBottom="@dimen/margin_medium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/margin_medium"
+        android:paddingVertical="@dimen/margin_medium">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ivActiveChatProfile"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/profile_vector"
+            android:scaleType="centerCrop"
+
+            />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ivActiveChatIcon"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            app:srcCompat="@drawable/ic_active"
+            android:scaleType="centerCrop"
+            android:layout_alignBottom="@id/ivActiveChatProfile"
+            android:layout_alignEnd="@id/ivActiveChatProfile"
+            app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Medium"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvActiveChatName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_medium"
+            android:text="Thiha"
+            android:maxLines="2"
+            android:textColor="@color/text_color_primary"
+            android:textSize="@dimen/text_regular_2x"
+            android:gravity="center"
+            android:layout_alignTop="@id/ivActiveChatProfile"
+            android:layout_toEndOf="@id/ivActiveChatProfile"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvActiveChatLastText"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@id/tvActiveChatName"
+            android:layout_below="@id/tvActiveChatName"
+            android:text="You sent a video"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textAlignment="textStart"
+            android:textSize="@dimen/text_regular"
+            />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvActiveChatTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/margin_medium"
+            android:text="15min ago"
+            android:textColor="@color/text_color_primary"
+            android:textSize="@dimen/text_small"
+            android:gravity="center"
+            />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ivActiveChatStatus"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginEnd="@dimen/margin_medium"
+            app:srcCompat="@drawable/ic_seen"
+            android:scaleType="centerCrop"
+            app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Medium"
+            android:layout_alignParentEnd="true"
+            android:layout_alignBottom="@id/ivActiveChatProfile"
+            />
+
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

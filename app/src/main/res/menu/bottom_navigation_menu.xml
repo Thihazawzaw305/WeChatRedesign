@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_moment"
+        android:title="@string/lbl_moment"
+        android:icon="@drawable/ic_moment"/>
+    <item
+        android:id="@+id/action_Chat"
+        android:title="@string/lbl_chat"
+        android:icon="@drawable/ic_chat"/>
+    <item
+        android:id="@+id/action_Contacts"
+        android:title="@string/lbl_contacts"
+        android:icon="@drawable/ic_contact"/>
+    <item
+        android:id="@+id/action_Me"
+        android:title="@string/lbl_me"
+        android:icon="@drawable/ic_profile"/>
+
+    <item
+        android:id="@+id/action_setting"
+        android:title="@string/lbl_setting"
+        android:icon="@drawable/ic_menu"/>
+</menu>

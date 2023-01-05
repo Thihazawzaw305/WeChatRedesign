@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.WelcomeActivity">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="150dp"
+        android:layout_height="200dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/ic_logo" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/welcomeText1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/welcomeText2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/margin_medium"
+        android:text="@string/lbl_text_your_friends_and_share_moments"
+        android:textColor="@color/text_color_primary"
+        android:textSize="@dimen/text_regular"
+        android:textStyle="bold" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/welcomeText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/btnSignUp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/margin_large"
+        android:text="@string/lbl_end_to_end_secured_messaging_app_with_social_elements"
+        android:textColor="@color/text_color_primary"
+        android:textSize="@dimen/text_small" />
+
+    <FrameLayout
+        android:id="@+id/btnSignUp"
+        android:layout_width="147dp"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/margin_large"
+        android:layout_marginBottom="@dimen/margin_xlarge"
+        android:background="@drawable/signup_button_background">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/lbl_sign_up"
+            android:textColor="@color/text_color_primary"
+            android:textSize="@dimen/text_regular_2x"
+            android:textStyle="bold" />
+
+    </FrameLayout>
+
+
+    <FrameLayout
+        android:id="@+id/btnLogin"
+        android:layout_width="147dp"
+        android:layout_height="48dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/margin_large"
+        android:layout_marginEnd="@dimen/margin_large"
+        android:layout_marginBottom="@dimen/margin_xlarge"
+        android:background="@drawable/fill_color_button_background">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/lbl_login"
+            android:textColor="@color/color_primary"
+            android:textSize="@dimen/text_regular_2x"
+            android:textStyle="bold" />
+
+    </FrameLayout>
+
+</RelativeLayout>
+

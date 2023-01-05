@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.SignUpActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btnBackFromSignUpScreen"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="@dimen/margin_medium_2"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:src="@drawable/ic_baseline_arrow_back_black_24"
+                android:tint="@color/text_color_primary" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvHiFromSignUp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btnBackFromSignUpScreen"
+                android:layout_marginStart="@dimen/margin_medium_2"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:text="@string/lbl_hi"
+                android:textColor="@color/text_color_primary"
+                android:textSize="@dimen/text_heading_1x"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvCreateNewAccount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvHiFromSignUp"
+                android:layout_marginStart="@dimen/margin_medium_2"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:text="@string/lbl_create_a_new_account"
+                android:textColor="@color/text_color_primary"
+                android:textSize="@dimen/text_regular_2x" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivCircleImage"
+                android:layout_width="135dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btnBackFromSignUpScreen"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="-28dp"
+                android:src="@drawable/path" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvEnterYourNameLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ivCircleImage"
+                android:layout_marginStart="@dimen/margin_medium_2"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:text="@string/lbl_enter_your_name"
+                android:textSize="@dimen/text_regular_2x" />
+
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvEnterYourNameLabel"
+                android:layout_marginStart="@dimen/margin_medium_2"
+                android:layout_marginEnd="@dimen/margin_medium_2"
+                android:hint="@string/lbl_enter_your_name"
+                android:inputType="textPersonName" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvDateOfBirthLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/etName"
+                android:layout_marginStart="@dimen/margin_medium_2"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:text="@string/lbl_date_of_birth"
+                android:textSize="@dimen/text_regular_2x" />
+
+            <LinearLayout
+                android:id="@+id/llSelectDateOfBirth"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_below="@id/tvDateOfBirthLabel"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/margin_medium_2">
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/spDay"
+                    style="@style/Widget.Material3.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                    android:layout_width="80dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="@dimen/margin_medium_2"
+                    android:layout_marginTop="@dimen/margin_medium_2"
+                    android:background="@drawable/otp_number_background"
+                    android:elevation="5dp"
+                    android:textAlignment="textStart" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/ic_baseline_arrow_drop_down_dark_bllue_24"
+                    android:layout_marginTop="@dimen/margin_large"
+                    android:tint="@color/text_color_primary"
+                    android:layout_marginStart="-30dp"
+                    android:elevation="6dp"/>
+
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/spMonth"
+                    style="@style/Widget.Material3.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                    android:layout_width="120dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="@dimen/margin_large"
+                    android:layout_marginTop="@dimen/margin_medium_2"
+                    android:background="@drawable/otp_number_background"
+                    android:elevation="5dp"
+                    android:textAlignment="textStart" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/ic_baseline_arrow_drop_down_dark_bllue_24"
+                    android:layout_marginTop="@dimen/margin_large"
+                    android:tint="@color/text_color_primary"
+                    android:layout_marginStart="-30dp"
+                    android:elevation="6dp"/>
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/spYear"
+                    style="@style/Widget.Material3.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="@dimen/margin_large"
+                    android:layout_marginTop="@dimen/margin_medium_2"
+                    android:background="@drawable/otp_number_background"
+                    android:elevation="5dp"
+                    android:textAlignment="textStart" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/ic_baseline_arrow_drop_down_dark_bllue_24"
+                    android:layout_marginTop="@dimen/margin_large"
+                    android:tint="@color/text_color_primary"
+                    android:layout_marginStart="-30dp"
+                    android:elevation="6dp"/>
+
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvGenderLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/llSelectDateOfBirth"
+                android:layout_marginStart="@dimen/margin_medium_2"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:text="@string/lbl_gender"
+                android:textSize="@dimen/text_regular_2x" />
+
+            <RadioGroup
+                android:id="@+id/radioButtonGroupForGender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvGenderLabel"
+                android:orientation="horizontal"
+                android:padding="@dimen/margin_medium_2">
+
+                <RadioButton
+                    android:id="@+id/rBtnMale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_medium_2"
+                    android:buttonTint="@color/text_color_primary"
+                    android:text="@string/lbl_male"
+                    android:textColor="@color/text_color_primary"
+                    android:textSize="@dimen/text_regular_2x"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/rBtnFemale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_medium_2"
+                    android:buttonTint="@color/text_color_primary"
+                    android:text="@string/lbl_female"
+                    android:textColor="@color/text_color_primary"
+                    android:textSize="@dimen/text_regular_2x"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/rBtnOther"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_medium_2"
+                    android:buttonTint="@color/text_color_primary"
+                    android:text="@string/lbl_other"
+                    android:textColor="@color/text_color_primary"
+                    android:textSize="@dimen/text_regular_2x"
+                    android:textStyle="bold" />
+
+            </RadioGroup>
+
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etPasswordFromSignUp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/radioButtonGroupForGender"
+                android:layout_marginStart="@dimen/margin_medium_2"
+                android:layout_marginEnd="@dimen/margin_medium_2"
+                android:hint="@string/lbl_password"
+                android:inputType="textPersonName" />
+
+
+            <LinearLayout
+                android:id="@+id/llTermsAndServices"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/etPasswordFromSignUp"
+                android:layout_marginStart="@dimen/margin_medium_2"
+                android:layout_marginTop="@dimen/margin_medium_2">
+
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/cbTermsAndServices"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:buttonTint="@color/text_color_primary"
+                    android:checked="false"
+                    android:text="" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Agree To " />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Term And Service "
+                    android:textColor="@color/text_color_primary"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+            <FrameLayout
+                android:id="@+id/btnSignUpFromSignUpScreen"
+                android:layout_width="147dp"
+                android:layout_height="48dp"
+                android:layout_below="@id/llTermsAndServices"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/margin_large"
+                android:alpha="0.5"
+                android:background="@drawable/fill_color_button_background">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/lbl_sign_up"
+                    android:textColor="@color/color_primary"
+                    android:textSize="@dimen/text_regular_2x"
+                    android:textStyle="bold" />
+
+            </FrameLayout>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_below="@id/llTermsAndServices"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="-10dp"
+                android:src="@drawable/small_circle" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="@dimen/margin_medium_2"
+                android:layout_below="@id/btnSignUpFromSignUpScreen"
+                android:src="@drawable/trangle" />
+
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

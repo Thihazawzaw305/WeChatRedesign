@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/margin_medium"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/ivFileImage"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.MediumComponent"
+        app:srcCompat="@drawable/sample_image"
+        android:scaleType="centerCrop" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivPlayArrow"
+        android:layout_width="@dimen/margin_xlarge"
+        android:layout_height="@dimen/margin_xlarge"
+        app:srcCompat="@drawable/ic_play"
+        android:tint="@color/white"
+        android:visibility="gone"
+        android:layout_centerInParent="true"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivFileRemove"
+        android:layout_width="@dimen/margin_xlarge"
+        android:layout_height="@dimen/margin_xlarge"
+        android:layout_alignEnd="@id/ivFileImage"
+        android:tint="@color/white"
+        app:srcCompat="@drawable/ic_close" />
+
+</RelativeLayout>

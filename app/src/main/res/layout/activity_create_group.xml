@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.CreateGroupActivity">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivCreateGroupBack"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:tint="@color/text_color_primary"
+        android:layout_marginStart="@dimen/margin_medium_2"
+        android:layout_marginTop="@dimen/margin_medium_2"
+        app:srcCompat="@drawable/ic_close" />
+
+
+    <FrameLayout
+        android:id="@+id/btnCreateGroup"
+        android:layout_width="70dp"
+        android:layout_height="38dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/margin_medium_2"
+        android:layout_marginEnd="@dimen/margin_medium_2"
+        android:layout_marginBottom="@dimen/margin_xlarge"
+        android:background="@drawable/fill_color_button_background">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/lbl_create"
+            android:textColor="@color/color_primary"
+            android:textSize="@dimen/text_regular_2x"
+            android:textStyle="bold" />
+    </FrameLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/margin_medium_2"
+        android:text="@string/lbl_new_group"
+        android:textColor="@color/text_color_primary"
+        android:textSize="@dimen/text_regular_3x"
+        android:textStyle="bold" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textFieldGroupName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ivCreateGroupBack"
+        android:layout_marginHorizontal="@dimen/margin_medium_2"
+        android:layout_marginTop="@dimen/margin_medium_2"
+        android:hint="@string/lbl_group_name"
+        android:textColorHint="@color/grey">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtGroupName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:paddingStart="0dp"
+            android:paddingTop="@dimen/margin_xlarge"
+            android:paddingEnd="0dp"
+            android:paddingBottom="@dimen/margin_small" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textFieldCreateGroupSearch"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@id/textFieldGroupName"
+        android:layout_marginHorizontal="@dimen/margin_medium_2"
+        android:layout_marginTop="@dimen/margin_medium_2"
+        android:backgroundTint="@color/grey"
+        android:textColorHint="@color/grey"
+        app:boxStrokeColor="@color/search_box_stroke_color"
+        app:endIconMode="clear_text"
+        app:hintAnimationEnabled="false"
+        app:hintEnabled="false"
+        app:startIconDrawable="@drawable/ic_search">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtCreateGroupSearch"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:hint="Search"
+            android:padding="0dp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/ivGroupPhoto"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_below="@id/textFieldCreateGroupSearch"
+        android:layout_marginStart="@dimen/margin_medium_2"
+        android:layout_marginTop="@dimen/margin_medium_2"
+        android:scaleType="centerCrop"
+        android:tint="@color/text_color_primary"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.Material3.Corner.Bottom"
+        app:srcCompat="@drawable/ic_picture" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvSelectContactGroup"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ivGroupPhoto"
+        android:layout_marginTop="@dimen/margin_medium_2"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:itemCount="1"
+        tools:listitem="@layout/view_holder_contact_group" />
+
+    <include
+        android:id="@+id/layoutCreateGroupEmpty"
+        layout="@layout/view_empty_contact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ivGroupPhoto"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:visibility="gone" />
+
+
+</RelativeLayout>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.SetUpProfileActivity">
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_medium_2"
+        android:layout_marginTop="@dimen/margin_medium_2"
+        android:text="@string/lbl_profile_setup"
+        android:textColor="@color/text_color_primary"
+        android:textSize="@dimen/text_heading_1x"
+        android:textStyle="bold" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivProfile"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/male_profile"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivAddProfile"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:src="@drawable/add_icon"
+        android:layout_alignBottom="@id/ivProfile"
+        android:layout_toEndOf="@id/ivProfile"
+        android:layout_marginStart="-40dp"/>
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvSetUpProfileRemind"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ivProfile"
+        android:layout_marginHorizontal="@dimen/margin_medium_2"
+        android:layout_marginTop="@dimen/margin_large"
+        android:text="@string/lbl_tap_to_change_profile_picture"
+        android:textAlignment="center"
+        android:textSize="@dimen/text_regular_2x" />
+
+    <FrameLayout
+        android:id="@+id/btnUploadProfile"
+        android:layout_width="147dp"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/margin_large"
+        android:layout_marginEnd="@dimen/margin_large"
+        android:layout_marginBottom="@dimen/margin_xlarge"
+        android:background="@drawable/fill_color_button_background">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/lbl_finish"
+            android:textColor="@color/color_primary"
+            android:textSize="@dimen/text_regular_2x"
+            android:textStyle="bold" />
+
+    </FrameLayout>
+
+
+</RelativeLayout>
